@@ -29,16 +29,27 @@ function getValues(objArray, query){
             }
         });
         if(match == true){
-            result.push(obj[query.key]);
+            result.push(parseFloat(obj[query.key]));
         }
     });
     return result;
 }
 
-function getMedian(array){
-    array = array.sort();
-    return parseInt(array[Math.floor(array.length / 2)]);
-}
+function getMedian(values){
+    console.log(values);
+    if(values.length ===0) throw new Error("No inputs");
+  
+    values.sort(function(a,b){
+      return a-b;
+    });
+  
+    var half = Math.floor(values.length / 2);
+    
+    if (values.length % 2)
+      return values[half];
+    
+    return Math.round((values[half - 1] + values[half]) / 2.0);
+  }
 
 function getAverage(array){
     var total = 0;
