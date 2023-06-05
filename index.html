@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KLASSENJUSTITIE.BE</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="KLASSENJUSTITIE.BE">
+        <meta name="description" content="Open burgeronderzoek naar rechtspraak in België.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://klassenjustitie.be/">
+        <meta property="og:title" content="KLASSENJUSTITIE.BE">
+        <meta property="og:description" content="Open burgeronderzoek naar rechtspraak in België.">
+        <meta property="og:image" content="https://klassenjustitie.be/img/share.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://klassenjustitie.be/">
+        <meta property="twitter:title" content="KLASSENJUSTITIE.BE">
+        <meta property="twitter:description" content="Open burgeronderzoek naar rechtspraak in België.">
+        <meta property="twitter:image" content="https://klassenjustitie.be/img/share.png">
+        <link rel="stylesheet" href="./style.css"/>
+        <script
+        src="./lib/jquery-3.7.0.min.js"></script>
+        <link href="./lib/jquery.dataTables.min.css" rel="stylesheet">
+        <script src="./lib/jquery.dataTables.min.js"></script>
+        <script src="./lib/moment.min.js"></script>
+        <script src="./lib/datetime-moment.js"></script>
+        <link href="./lib/shareon.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <div class="logo-container">
+                    <img src="./img/logo.png" class="logo-icon"/>
+                    <div class="logo-text-container">
+                        <p class="logo-text">Klassenjustitie.be</p>
+                        <p class="logo-subtext">Open burgeronderzoek naar rechtspraak in België.</p>
+                    </div>
+                </div>
+                <nav class="menu-container">
+                    <ul>
+                        <li><a href="#about">Over deze website</a></li>
+                        <li><a href="#stats">Statistieken</a></li>
+                        <li><a href="#arrests">Schadevergoedingen</a></li>
+                        <li><a href="#contribute">Doe mee</a></li>
+                    </ul>
+                </nav>
+                <div class="shareon">
+                    <a class="facebook">Deel</a>
+                    <a class="twitter">Tweet</a>
+                    <a class="linkedin">Post</a>
+                    <a class="mastodon">Toot</a>
+                    <a class="reddit"></a>
+                    <a class="telegram"></a>
+                    <a class="viber"></a>
+                    <a class="whatsapp"></a>
+                    <a class="copy-url">Kopieëer link</a>
+                </div>
+            </header>
+            <section id="about">
+                <p>
+                    Er wordt gezegd dat er in Belgische rechtbanken met twee maten en gewichten wordt geoordeeld.<br/>
+                    Maar is dat ook zo? Laat ons het debat voeren steunend op feiten in plaats van gevoelens.<br/><br/>
+                    Geen enkele misdaad is dezelfde, en elke zaak kan verzwarende of net verzachtende omstandigheden hebben die reflecteren in boetes en strafmaat. Daarom focust deze website zich op de <b>totale schadevergoeding</b> die wordt berekend aan de hand van <b>morele</b> en <b>materiële</b> schade bij een overlijden.<br/><br/>Hoewel een rechter altijd goede redenen kan hebben om af te wijken van de <b>forfaitaire bedragen</b>, trachten we zoveel mogelijk arresten te verzamelen om op basis van een groot volume algemene trends waar te nemen.<br/><br/>Hoe meer gegevens we verzamelen, hoe accurater onze statestieken, dus <a href="#contribute">help gerust mee</a>, en bouw zo aan een transparanter justitiebeleid!
+                </p>
+            </section>
+            <section id="stats">
+                <h2>Statistieken</h2>
+                <p>Deze statistieken worden voortdurend geüpdated op basis van de meest recente gegevens. De gemiddelden en medianen worden op dit moment berekend op basis van <span id="arrest-amount">een hondertal</span> gepubliceerde arresten.</span></p>
+                <div id="stats-tables-container">
+                    Aan het laden...
+                </div>
+            </section>
+            <section id="arrests">
+                <h2>Lijst van schadevergoedingen</h2>
+                <p>Deze lijst van gegevens van slachtoffers samengesteld uit openbare bronnen zoals krantenartikelen en gepubliceerde arresten. Iedereen kan aanvullingen doen aan de lijst of onjuistheden rechtzetten door een aanpassing aan te vragen via <a href="#contribute">GitHub</a>.</p>
+                <table id="arrests-table">
+                    <thead>
+                        <th>Datum</th>
+                        <th>Bedrag</th>
+                        <th>Geslacht</th>
+                        <th>Leeftijd</th>
+                        <th>Etnische roots*</th>
+                        <th>Job</th>
+                        <th>Bron</th>
+                    </thead>
+                    <tbody id="arrests-items">
+                    </tbody>
+                </table>
+                <br/><sup>*</sup>Onder Niet-Belgische roots vallen in dit geval ook personen waarvan één of beide ouders een migratieachtergrond hebben.
+            </section>
+            <section id="contribute">
+                <h2>Doe mee</h2>
+                <p>Wil je graag mee helpen om deze gegevens up-to-date te houden? Dat kan!<br/><br/>
+                Via GitHub kan je eenvoudig een aanpassingsverzoek insturen. We keuren nieuwe gegevens goed, mits het aan de volgende regels beantwoordt:
+                <ul>
+                    <li>De schadevergoeding moet uitgesproken zijn door een rechter in een vonnis.</li>
+                    <li>Elk datapunt dient een link naar de bronwebsite te bevatten. Enkel primaire nieuwsbronnen worden aanvaard. Betaalmuur mag.</li>
+                    <li>Publiceer geen informatie die niet publiek gemaakt is.</li>
+                    <li>Voeg enkel datapunten toe waarbij er slechts één dodelijk slachtoffer is.</li>
+                    <li>Als er enkel een bedrag bij benadering staat, mag je dit zo overnemen in de dataset (bijvoorbeeld: bijna 30.000 wordt 30.000).</li>
+                </ul>
+                </p>
+            </section>
+            <footer>
+                &copy; 2023 - Inti De Ceukelaire (INTI Comm. V. - BE0700.276.751)
+            </footer>
+        </div>
+        <script src="./main.js"></script>
+        <script src="./lib/shareon.iife.js"   defer
+        init></script>
+    </body>
+</html>

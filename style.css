@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./fonts/Merriweather-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Merriweather-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: bold;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./fonts/Merriweather-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: black;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/Merriweather-Black.ttf) format('truetype');
+}
+
+html, body{
+    font-family: 'Merriweather', serif;
+}
+body{
+    padding : 20px;
+}
+#wrapper{
+    width: 900px;
+    margin:auto;
+    left : 0;
+    right : 0;
+    line-height: 25px;
+}
+header{
+    text-align: center;
+}
+section{
+    margin : 55px 0;
+}
+.logo-icon{
+    height : 160px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text-container{
+    display: inline-block;
+    position: relative;
+    margin: 0px 20px;
+}
+.logo-text{
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+nav ul{
+    list-style: none;
+    padding : 20px;
+}
+nav ul li{
+    margin-left : 0;
+    padding : 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+a{
+    font-weight: bold;
+    color : rgb(159, 25, 25);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+#stats-tables-container{
+    display: flex;;
+}
+
+#arrests-table{
+    margin : 0;
+    width : 100% !important;
+}
+
+.table-group{
+    text-align: center;
+}
+.table-group-title{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.table-group-description{
+    font-size: 14px;
+}
+#stats-averages{
+    width : 100%;
+}
+#stats-averages  td, #stats-averages  th{
+    text-align: center !important;
+}
+
+#stats-averages table tr td:nth-child(5) {
+    border-left: 1px solid #000000;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color : #f1f1f1 !important;
+}
+
+table tbody tr:last-child {
+   border-top : 1px solid #000000  !important;
+}
+
+footer{
+    text-align: center;
+    padding : 20px;
+    color : #333;
+}
+
+h2{
+    margin: 30px 0;
+}
+
