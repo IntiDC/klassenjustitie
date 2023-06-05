@@ -61,7 +61,7 @@ function getAverage(array){
 
 
 $(document).ready(function(){
-    $.get("./data.csv").then(data => {
+    $.get("./data.csv? " + Math.random()).then(data => {
         var rows = data.split("\n");
         //first convert to an object
         var headers = rows[0].trim().replaceAll("\"", "").split(",");
@@ -347,12 +347,6 @@ $(document).ready(function(){
                     </tbody>
                 </table>
             </div>
-            <!--
-        <div id="stats-medians">
-            <h3>Medianen</h3>
-            <p>De medianen worden berekend door alle schadevergoedingen van laag naar hoog te sorteren, en de middenste waarde te nemen.</p>
-    
-        </div>-->
         `;
         $.extend( jQuery.fn.dataTableExt.oSort, {
             "date-uk-pre": function (a){
